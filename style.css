@@ -1,0 +1,9 @@
+body{
+  margin: 0;
+}
+
+div.status{
+   position: absolute;
+   color:white;
+   margin: 10px;
+}
