@@ -93,23 +93,23 @@ function dist(x0,y0,z0){
 }
 
 const vec_boat = new THREE.Vector3(20, 0, 70);
-function dist_boat(x0,y0,z0,keypress){
+// function dist_boat(x0,y0,z0,keypress){
 
-    const vec2 = new THREE.Vector3(x0, y0, z0);
-    var distance_boat = vec2.distanceTo(vec_boat); 
-    console.log(distance_boat);
+//     const vec2 = new THREE.Vector3(x0, y0, z0);
+//     var distance_boat = vec2.distanceTo(vec_boat); 
+//     console.log(distance_boat);
 
-    $.getJSON(serverPath,
-        {username: username,
-         timeMark: Date.now(),
-         objname: "boat_distance",
-         action: keypress,
-         x: distance_boat,
-         y: 0 },
-        function(data) {console.log(data)}
-       )
+//     $.getJSON(serverPath,
+//         {username: username,
+//          timeMark: Date.now(),
+//          objname: "boat_distance",
+//          action: keypress,
+//          x: distance_boat,
+//          y: 0 },
+//         function(data) {console.log(data)}
+//        )
 
-}
+// }
 
 
 initScene();
