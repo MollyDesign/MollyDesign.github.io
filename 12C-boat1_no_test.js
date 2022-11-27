@@ -1,13 +1,13 @@
-import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
-import { Water } from 'three/examples/jsm/objects/Water';
+import * as THREE from './js/three.js';
+import { OrbitControls } from './js/OrbitControls.js';
+import {GLTFLoader} from './js/GLTFLoader.js';
+import { Water } from './js/Water.js';
 const waterTexture = document.getElementById("img-material")
 const lensflareTexture0 = document.getElementById("img-material-1")
 const lensflareTexture1 = document.getElementById("img-material-2")
-import { Sky } from 'three/examples/jsm/objects/Sky';
-import { Lensflare, LensflareElement } from 'three/examples/jsm/objects/Lensflare.js';
-import { PointerLockControls } from 'three/addons/controls/PointerLockControls.js';
+import { Sky } from './js/Sky.js';
+import { Lensflare, LensflareElement } from './js/Lensflare.js';
+import { PointerLockControls } from './js/PointerLockControls.js';
 //第一视角
 
 
@@ -35,30 +35,30 @@ const velocity = new THREE.Vector3();
 const direction = new THREE.Vector3();
 
 
-var username = prompt("Username, please.")
-var serverPath = "https://kaoyan1.eu.pythonanywhere.com/threejs/get_mousedata";
+// var username = prompt("Username, please.")
+// var serverPath = "https://kaoyan1.eu.pythonanywhere.com/threejs/get_mousedata";
 
-$.getJSON(serverPath,
-         {username: username,
-          timeMark: Date.now(),
-          objname: "homepage",
-          action: "landing",
-          x: 0,
-          y: 0 },
-         function(data) {console.log(data)}
-        )
+// $.getJSON(serverPath,
+//          {username: username,
+//           timeMark: Date.now(),
+//           objname: "homepage",
+//           action: "landing",
+//           x: 0,
+//           y: 0 },
+//          function(data) {console.log(data)}
+//         )
 
-function mousetrack (event) {
+// function mousetrack (event) {
     
-   $.getJSON(serverPath,
-         {username: username,
-          timeMark: Date.now(),
-          objname: "view",
-          action: event.type,
-          x: event.clientX,
-          y: event.clientY },
-         function(data) {console.log(data)})
-}
+//    $.getJSON(serverPath,
+//          {username: username,
+//           timeMark: Date.now(),
+//           objname: "view",
+//           action: event.type,
+//           x: event.clientX,
+//           y: event.clientY },
+//          function(data) {console.log(data)})
+// }
 
 // function keyboardtrack (event) {
 // console.log(event.key)
