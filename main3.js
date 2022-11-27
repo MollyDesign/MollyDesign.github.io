@@ -242,9 +242,8 @@ function render(){
     requestAnimationFrame( render );
    
     
-
-	renderer.render(scene,camera);
-    lightHelper.update();
+    renderer.render(scene,camera);
+    
 
     // mixer.update(delta);
     
